@@ -23,7 +23,6 @@ class User {
     }
 
     // метод setEmail ми не створюємо
-
     //public function setEmail($email) {
     //    $this->email = $email;
     //}
@@ -31,7 +30,6 @@ class User {
     public function getAll() {
         return "Name - " . $this->name . ", Age - " . $this->age . ", Email -" . $this->email;
     }
-
 }
 
 try {
@@ -40,10 +38,8 @@ try {
     $user->setAge(22);
     $user->setEmail('dapeeche@ukr.net');
 
-    echo $user->getAll();
-
 } catch (UserException $e) {
     echo 'Exception: ' . $e->getMessage() . PHP_EOL;
-    echo $user->getAll();
 }
 
+echo $user->getAll();
